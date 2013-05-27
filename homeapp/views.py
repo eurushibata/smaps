@@ -4,4 +4,5 @@ from place.models import Place
 
 def index(request):
 	places = Place.objects.all
-	return render(request, 'homeapp/index.html', {'places': places})
+	variavel = "blablabla"
+	return render(request, 'homeapp/index.html', {'places': places, 'variavel': variavel})

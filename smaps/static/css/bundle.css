@@ -1,0 +1,124 @@
+
+
+body {
+	background: #000;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	left:-200px;
+}
+
+.leaflet-control-zoom a:hover {
+	background: #66D5F0 !important;
+	color: #000 !important;
+}
+
+.leaflet-control-zoom a.leaflet-control-zoom-disabled:hover {
+	background: #fff !important;
+	color: #bbb !important;
+}
+
+.leaflet-bar {
+	border: 0 !important;
+	top: 150px;
+}
+
+.leaflet-bar-part {
+	border: 0 !important;
+}
+
+
+.leaflet-control-zoom-in {
+	line-height: 30px !important;
+    display: inline-block;
+	top: 20px;
+	position: absolute;
+	height: 30px !important;
+	background: #fff !important;
+	width: 30px !important;
+	border-radius: 6px !important;
+}
+
+.leaflet-control-zoom-out {
+	line-height: 28px !important;
+	top: 20px;
+	left: 35px;
+	position: absolute;
+	height: 30px !important;
+	background: #fff !important;
+	width: 30px !important;
+	border-radius: 6px !important;
+}
+
+.leaflet-control-attribution {
+	display: none;
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: 6px !important;
+}
+
+.geolocationBT {
+	background-position: -40px -40px;
+	background-color: rgba(255,255,255,0.5);
+	background-image: url('/static/img/assets_mapSubNav.png');
+	-webkit-transition: background-color ease-out 0.5s;
+
+	cursor: pointer;
+	top: 20px;
+	right: 570px;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	border-radius: 6px;
+}
+
+.geolocationBT:hover{
+	background-position:-80px -40px;
+}
+
+.geolocationBT.selected {
+	background-color: #fff;
+}
+
+.front-board-arrow-BT {
+	top:40%;
+	right:550px;
+	position: absolute;
+	height:40px;
+	background: #fff;
+	width:40px;
+	border-radius: 6px 0 0 6px;
+}
+
+.closeBtn, .openBtn {
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+}
+
+.closeBtn {
+	background: url('/static/img/closeBT.png') top left no-repeat !important;
+}
+.openBtn {
+	background: url('/static/img/closeBT.png') bottom left no-repeat !important;
+}
+
+.front-board {
+	z-index: 1000;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+	height: 100%;
+	background: #fff;
+	width: 550px;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+}
