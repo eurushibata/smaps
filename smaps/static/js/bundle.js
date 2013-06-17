@@ -3,8 +3,8 @@ $(document).ready(function() {
 		center: [-21.172247, -47.809238],
     	zoom: 14,
     	minZoom: 10,
-    	maxZoom: 16
-});
+    	maxZoom: 20
+	});
 
 	L.tileLayer('http://{s}.tile.cloudmade.com/ba52dbcbe23f4cdba4adb592d2420275/97121/256/{z}/{x}/{y}.png', {
     	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
@@ -12,26 +12,35 @@ $(document).ready(function() {
 	}).addTo(map);
 	
 	// plot markers on map due to places json
-	$.getJSON("/place/json").done(function (json){
+	$.getJSON("/places/json").done(function (json){
         $.each(json, function(key, value){
         	val = value.fields.position.split(',');
         	var marker = L.marker([val[0], val[1]], {
         		riseOnHover: true,
-        		opacity: 0.8,
+        		opacity: 0.6,
         		title: value.fields.name
         	}).addTo(map);
         	marker.bindPopup("<b>"+value.fields.name+"</b><br>"+value.fields.address);
 			marker.on('click',function(e){
 				map.setView([e.target._latlng.lat, e.target._latlng.lng], 14);
 			});
+			marker.on('mouseover', function(e){
+				marker.setOpacity(1);
+			});
+			marker.on('mouseout', function(e){
+				marker.setOpacity(0.6);
+			});
         });
     });
 
+
+	// Swipe function for front board
 	$(".leaflet-bar").css('left',-1*parseInt($("#map").css("left")));
 
 	var initial = $('.front-board').width();
 	var initial_geo = parseInt($('.geolocationBT').css('right'));
 	var initial_leaflet = parseInt($('.leaflet-bar').css('left'));
+
 	$(".front-board-arrow-BT").click(function(e){
 	  	if($(this).css('right')=='0px'){
 	  		$('.leaflet-bar').animate({left:initial_leaflet});
@@ -53,7 +62,14 @@ $(document).ready(function() {
 			$(this).addClass('openBtn');
 	  	}
   	});
-	
+
+  	// Swipe function for touch (QUOJS)
+  	$$('.front-board').swipeRight(function(){
+  		$(".front-board-arrow-BT").click();
+  	});
+
+
+	// Physical location
 	$('.geolocationBT').click(function(){
 		if (navigator.geolocation){
 			navigator.geolocation.getCurrentPosition(mapOnGeolocation);
@@ -744,5 +760,6 @@ var polygon = L.polygon([
 		map.setView([-21.164883,-47.806492], 14);
 	});
 
+	
 
 });

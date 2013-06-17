@@ -1,0 +1,38 @@
+#place_detail .header .header-info {
+	background: #bbb;
+	height: 100px;
+	display: block;
+	padding-top:1px;
+}
+#place_detail .menu .navbar .nav {
+	margin: 0px !important;
+}
+
+#place_detail .menu #menu-box .navbar-inner {
+	padding: 0 !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+
+#place_detail .menu #menu-box .navbar-inner {
+	min-height:50px !important;
+}
+
+#place_detail .menu #menu-box .navbar-inner .nav>li {
+	border-right: 1px solid #d4d4d4;
+	min-height: 59px;
+}
+
+#place_detail .menu #menu-box .navbar-inner .nav>li:last-child {
+	border-right: 0px !important;
+}
+
+#place_detail .menu #menu-box .navbar-inner .nav>li>a {
+	padding: 15px 25px 0 !important;
+	min-height: 44px;
+}
+
+#horario {
+	margin-bottom: 70px;
+}

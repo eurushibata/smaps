@@ -1,0 +1,45 @@
+[class^="i-"],
+[class*=" i-"] {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 26px;
+  vertical-align: text-top;
+  background-repeat: no-repeat;
+}
+
+.i-envelope {
+  margin: 5px 0 -5px 0;
+  background-image: url("../../img/icons/glyphicons_010_envelope.png");
+}
+
+.i-stats {
+  background-image: url("../../img/icons/glyphicons_040_stats.png");
+}
+
+.i-clock {
+  background-image: url("../../img/icons/glyphicons_054_clock.png");
+}
+
+.i-list {
+  background-image: url("../../img/icons/glyphicons_114_list.png");
+}
+
+.i-circle-info {
+  margin: -1px 0 1px 0;
+  background-image: url("../../img/icons/glyphicons_195_circle_info.png");
+}
+
+.i-google-maps {
+  margin: 0 -6px 0 6px;
+  background-image: url("../../img/icons/glyphicons_242_google_maps.png");
+}
+
+.i-nameplate {
+  background-image: url("../../img/icons/glyphicons_352_nameplate.png");
+}
+
+
+

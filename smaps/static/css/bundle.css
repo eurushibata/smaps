@@ -1,7 +1,15 @@
 
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 
 body {
-	background: #000;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: #000;
 }
 
 #map {
@@ -68,7 +76,7 @@ body {
 
 	cursor: pointer;
 	top: 20px;
-	right: 570px;
+	right: 560px;
 	position: absolute;
 	height: 40px;
 	width: 40px;
@@ -85,7 +93,7 @@ body {
 
 .front-board-arrow-BT {
 	top:40%;
-	right:550px;
+	right:540px;
 	position: absolute;
 	height:40px;
 	background: #fff;
@@ -117,7 +125,7 @@ body {
 	position: absolute;
 	height: 100%;
 	background: #fff;
-	width: 550px;
+	width: 540px;
 
 	overflow-y: auto;
 	overflow-x: hidden;
